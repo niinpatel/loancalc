@@ -6,8 +6,6 @@ var emiText = document.getElementById("emi");
 var interestText = document.getElementById("interest");
 var totalPaymentText = document.getElementById("totalPayment");
 
-
-
 function calculate() {
 
 
@@ -23,7 +21,7 @@ function calculate() {
 
 
     if (isNaN(emi)){
-        emiText.innerHTML = "Sorry, we coudn't calculate your EMI, check the inputs and try again.";
+        emiText.innerHTML = "Sorry, we couldn't calculate your EMI, check the inputs and try again.";
     }
     else {
         var totalEmi = emi*monthlyTenure;
@@ -35,9 +33,6 @@ function calculate() {
 
     }
 }
-
-
-
 
 function showchart(interest, principle){
     Highcharts.chart('piechart', {
