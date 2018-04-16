@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="card border-success mt-5">
+        <h1 class="card-header">Loan Calculator</h1>
+
+        <div class="card-body">
+            <div class="form-group">
+                <label for="principle">Principle: </label>
+                <input class="form-control" type="number" id="principle" /><br/>
+
+                <label for="interest">Rate of interest: </label>
+                <input class="form-control" type="number" id="interestRate" /><br/>
+
+                <label for="tenure">Loan Tenure: </label>
+                <input class="form-control" type="number" id="tenure" /><br/>
+
+                <button class="btn btn-outline-primary" id="calculate" onclick="calculate()">Calculate My EMI</button>
+
+            </div>
+
+            <div class="row" style="visibility: hidden" id="result"><!---->
+
+                <div class="col-md-6 mt-3">
+
+
+                    <p class="card-text lead" id="emi"></p>
+                    <p class="card-text lead" id="interest"></p>
+                    <p class="card-text lead" id="totalPayment"></p>
+                </div>
+
+                <div class="col-md-6 mt-3">
+
+                    <div id="piechart"></div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Javascript to calculate emi and create charts -->
+<script src="scripts.js"></script>
+
+<!-- Dependencies for creating charts -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+
+
+<!-- Optional JavaScript for bootstrap -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
