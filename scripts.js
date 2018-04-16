@@ -9,20 +9,16 @@ var totalPaymentText = document.getElementById("totalPayment");
 
 
 function calculate() {
-    /**
-     * Formula of EMI (from geeksforgeeks.org)
-     * E = (P.r.(1+r)^n) / ((1+r)^n – 1)
-     Here,
-     P = loan amount i.e principal amount
-     R = Interest rate per month
-     T = Loan time period in year
-     */
+
 
     var principle = parseFloat(principleInput.value);
     var monthlyInterestRate = parseFloat(interestInput.value)/1200;
     var monthlyTenure = parseFloat(tenureInput.value)*12;   // monthly tenure
 
-    var emi = (principle*monthlyInterestRate*(Math.pow((1+monthlyInterestRate), monthlyTenure)))/(Math.pow((1+monthlyInterestRate), monthlyTenure) - 1);
+    var emi = (monthlyInterestRate === 0)? (principle/monthlyTenure) :
+        (principle*monthlyInterestRate*(Math.pow((1+monthlyInterestRate), monthlyTenure)))
+        /(Math.pow((1+monthlyInterestRate), monthlyTenure) - 1);  // formula for calculating monthly EMI.
+
     result.style.visibility = "visible";
 
 
