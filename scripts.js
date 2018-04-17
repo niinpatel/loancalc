@@ -21,7 +21,7 @@ function calculate() {
 
 
     if (isNaN(emi)){
-        emiText.innerHTML = "Sorry, we couldn't calculate your EMI, check the inputs and try again.";
+        emiText.innerHTML = "Sorry, we couldn't calculate your EMI, check the inputs and try again.";  // checking if we got valid inputs/outputs.
     }
     else {
         var totalEmi = emi*monthlyTenure;
